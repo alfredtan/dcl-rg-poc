@@ -10,6 +10,7 @@ export function createRgPoc() {
   // add base
   const scene = new StandardEntity(
     new GLTFShape("models/hww_base_bare.glb"),
+    // new GLTFShape("models/hww_screens.glb"),
     new Transform({ position: new Vector3(8, 0, 8) })
   );
 
@@ -38,4 +39,107 @@ export function createRgPoc() {
 
   // add npc
   const npc = new HwwNPC();
+
+  // add screen
+  const screenLobby = new Entity();
+  screenLobby.addComponent(new PlaneShape());
+  screenLobby.addComponent(
+    new Transform({
+      position: new Vector3(8.2, 3.55, 15.15),
+      rotation: Quaternion.Euler(0, 180, 0),
+      scale: new Vector3(5.7, 2.7, 1),
+    })
+  );
+
+  // const screens_ref = new StandardEntity(
+  //   // new GLTFShape("models/hww_base_bare.glb"),
+  //   new GLTFShape("models/hww_screens.glb"),
+  //   new Transform({ position: new Vector3(8, 0, 8) })
+  // );
+
+  // add screen 2 1
+  const screen2_1 = new Entity();
+  screen2_1.addComponent(new PlaneShape());
+  screen2_1.addComponent(
+    new Transform({
+      position: new Vector3(1.735, 9.6, 2.6076),
+      rotation: Quaternion.Euler(0, 60, 0),
+      scale: new Vector3(1.55, 2.5, 1),
+    })
+  );
+
+  // add screen 2 2
+  const screen2_2 = new Entity();
+  screen2_2.addComponent(new PlaneShape());
+  screen2_2.addComponent(
+    new Transform({
+      position: new Vector3(1.7828, 9.7145, 6.4615),
+      rotation: Quaternion.Euler(0, 120, 0),
+      scale: new Vector3(1.7, 1.2, 1),
+    })
+  );
+
+  // add screen 2 3
+  const screen2_3 = new Entity();
+  screen2_3.addComponent(new PlaneShape());
+  screen2_3.addComponent(
+    new Transform({
+      position: new Vector3(5.3227, 9.6964, 8.47501),
+      rotation: Quaternion.Euler(0, 0, 0),
+      scale: new Vector3(1.7, 1.2, 1),
+    })
+  );
+
+  // add screen 3 1
+  const screen3_1 = new Entity();
+  screen3_1.addComponent(new PlaneShape());
+  screen3_1.addComponent(
+    new Transform({
+      position: new Vector3(7.18434, 15.514, 12.726),
+      rotation: Quaternion.Euler(0, 0, 0),
+      scale: new Vector3(6.5, 2.5, 1),
+    })
+  );
+
+  // temp mat for screen
+  const mat = new Material();
+  mat.albedoColor = Color3.Red();
+  screenLobby.addComponent(mat);
+  screen2_1.addComponent(mat);
+  screen2_2.addComponent(mat);
+  screen2_3.addComponent(mat);
+  screen3_1.addComponent(mat);
+
+  engine.addEntity(screenLobby);
+  engine.addEntity(screen2_1);
+  engine.addEntity(screen2_2);
+  engine.addEntity(screen2_3);
+  engine.addEntity(screen3_1);
+
+  // // #1
+  // const myVideoClip = new VideoClip(
+  //   // 'videos/SampleVideo_640x360_1mb.mp4'
+  //   // 'https://hogsters.s3.ap-southeast-1.amazonaws.com/Hogarth_Singapore_Non_TVC_Reel_2022_PR004.mp4'
+  //   "videos/hww-trim2.mp4"
+  //   // "https://hogsters.s3.ap-southeast-1.amazonaws.com/Hogarth_Singapore_Non_TVC_Reel_2022_PR004 - trim2.mp4"
+  // );
+
+  // // #2
+  // const myVideoTexture = new VideoTexture(myVideoClip);
+  // myVideoTexture.loop = true;
+  // myVideoTexture.volume = 0;
+  // myVideoTexture.play();
+
+  // // #3
+  // const myMaterial = new Material();
+  // myMaterial.albedoTexture = myVideoTexture;
+  // myMaterial.roughness = 1;
+  // myMaterial.specularIntensity = 0;
+  // myMaterial.metallic = 0;
+
+  // //screens
+  // const screens = new StandardEntity(
+  //   new GLTFShape("models/hww_screens.glb"),
+  //   new Transform()
+  // );
 }
