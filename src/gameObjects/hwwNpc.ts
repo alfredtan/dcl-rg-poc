@@ -29,7 +29,7 @@ export class HwwNPC extends Entity {
 
     // the actual NPC model
     const npc = new Entity();
-    npc.addComponent(new GLTFShape("models/hww_iRobot_stash_animation.glb"));
+    npc.addComponent(new GLTFShape("models/npc_robot.glb"));
     npc.setParent(this);
 
     // the collidor so that we can click on it
