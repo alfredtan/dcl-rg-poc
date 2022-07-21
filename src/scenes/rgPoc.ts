@@ -62,7 +62,10 @@ export function createRgPoc() {
       rotation: Quaternion.Euler(0, 180, 0),
       scale: new Vector3(5.7, 2.7, 1),
     }),
-    "https://hogsters.s3.ap-southeast-1.amazonaws.com/small-sample.mp4"
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/small-sample.mp4",
+    "https://youtube.com"
+
+
   );
   screenLobby.play();
 
@@ -72,7 +75,9 @@ export function createRgPoc() {
       rotation: Quaternion.Euler(0, 60, 0),
       scale: new Vector3(1.55, 2.5, 1),
     }),
-    "images/iori.png"
+    "images/iori.png",
+    "https://google.com"
+
 
   );
 
@@ -80,10 +85,11 @@ export function createRgPoc() {
     new Transform({
       position: new Vector3(1.7828, 9.7145, 6.4615),
       rotation: Quaternion.Euler(0, 120, 0),
-      scale: new Vector3(1.9, 1.4, 1),
+      scale: new Vector3(4.8, 2.7, 1),
+      // scale: new Vector3(1.9, 1.4, 1),
     }),
-    "https://hogsters.s3.ap-southeast-1.amazonaws.com/hww-720x480.mp4"
-
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/hww-720x480.mp4",
+    "https://youtube.com"
   );
 
   screen2_2.play();
@@ -94,20 +100,22 @@ export function createRgPoc() {
       rotation: Quaternion.Euler(0, 0, 0),
       scale: new Vector3(1.55, 1.3, 1),
     }),
-    "images/iori.png"
+    "images/iori.png",
+    "https://google.com"
+
 
   );
 
-  const screen3_1 = new GalleryPlaneVideo(
+  const screen3_1 = new GalleryPlaneImage(
     new Transform({
-      position: new Vector3(7.18434, 15.514, 12.726),
-      rotation: Quaternion.Euler(0, 0, 0),
-      scale: new Vector3(6.5, 2.5, 1),
+      position: new Vector3(7.18434, 15.514, 12.6),
+      rotation: Quaternion.Euler(180, 180, 0),
+      scale: new Vector3(6.56, 2.66, 1),
     }),
-    "https://hogsters.s3.ap-southeast-1.amazonaws.com/small-sample.mp4"
+    "images/screen3-iori.png",
+    "https://iori-labs.io/"
 
   );
-  screen3_1.play();
 
   // temp mat for screen
   // const mat = new Material();

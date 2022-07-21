@@ -7,17 +7,17 @@ export class GalleryPlaneVideo extends GalleryPlane {
 
   private videoTex: Video;
 
-  constructor(transform: TranformConstructorArgs, videoUrl: string) {
-    super(transform);
+  constructor(transform: TranformConstructorArgs, videoUrl: string, exitUrl: string) {
+    super(transform, exitUrl);
 
     this.videoTex = new Video(videoUrl);
     this.addComponentOrReplace(this.videoTex.vidMaterial);
 
-    this.addComponentOrReplace(new OnPointerDown(() => {
-      this.videoTex.playing = !this.videoTex.playing;
-    }, {
-      hoverText: "Play/Pause"
-    }));
+    // this.addComponentOrReplace(new OnPointerDown(() => {
+    //   this.videoTex.playing = !this.videoTex.playing;
+    // }, {
+    //   hoverText: "Play/Pause"
+    // }));
 
   }
 
