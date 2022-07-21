@@ -1,5 +1,7 @@
+import * as utils from "@dcl/ecs-scene-utils";
 import { GalleryPlane } from "./galleryPlane";
 import { Video } from "./video";
+
 
 export class GalleryPlaneVideo extends GalleryPlane {
 

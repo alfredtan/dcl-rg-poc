@@ -8,31 +8,36 @@ import { GalleryPlaneImage } from "src/gameObjects/galleryPlaneImage";
 import { Video } from "src/gameObjects/video";
 
 export function createRgPoc() {
-  // add floor
+  // // add floor
   const floor = new Floor(); //
 
-  // add base
+  // add base;
   const scene = new StandardEntity(
-    new GLTFShape("models/base_scene.glb"),
-    // new GLTFShape("models/hww_screens.glb"),
+    // new GLTFShape("models/base_scene.glb"),
+    new GLTFShape("models/hww_base_10_alternateV3.glb"),
+    // new GLTFShape("models/hww_base_07.glb"),
     new Transform({ position: new Vector3(8, 0, 8) })
   );
 
-  // add the lifts
+
+  // // // add the lifts;
   const lift_1 = new StandardEntity(
-    new GLTFShape("models/lift_1.glb"),
+    new GLTFShape("models/lift_1_no_mat.glb"),
     new Transform({ position: new Vector3(8, 0, 8) })
   );
   const lift_2 = new StandardEntity(
-    new GLTFShape("models/lift_2.glb"),
+    new GLTFShape("models/lift_2_no_mat.glb"),
     new Transform({ position: new Vector3(8, 0, 8) })
   );
   const lift_3 = new StandardEntity(
-    new GLTFShape("models/lift_3.glb"),
+    new GLTFShape("models/lift_3_no_mat.glb"),
     new Transform({ position: new Vector3(8, 0, 8) })
   );
 
-  // setup the rotating mannequin
+
+
+
+  // // setup the rotating mannequin
   const mann = new StandardEntity(
     new GLTFShape("models/mannequin_coord000.glb"),
     new Transform({ position: new Vector3(7.9, 3.3, 4) })
@@ -44,11 +49,11 @@ export function createRgPoc() {
   // add npc
   const npc = new HwwNPC();
 
-  const screens_ref = new StandardEntity(
-    // new GLTFShape("models/hww_base_bare.glb"),
-    new GLTFShape("models/screens_ref.glb"),
-    new Transform({ position: new Vector3(8, 0, 8) })
-  );
+  // // const screens_ref = new StandardEntity(
+  // //   // new GLTFShape("models/hww_base_bare.glb"),
+  // //   new GLTFShape("models/screens_ref.glb"),
+  // //   new Transform({ position: new Vector3(8, 0, 8) })
+  // // );
 
   // add screen
   const screenLobby = new GalleryPlaneVideo(
@@ -93,13 +98,16 @@ export function createRgPoc() {
 
   );
 
-  const screen3_1 = new GalleryPlane(
+  const screen3_1 = new GalleryPlaneVideo(
     new Transform({
       position: new Vector3(7.18434, 15.514, 12.726),
       rotation: Quaternion.Euler(0, 0, 0),
       scale: new Vector3(6.5, 2.5, 1),
-    })
+    }),
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/small-sample.mp4"
+
   );
+  screen3_1.play();
 
   // temp mat for screen
   // const mat = new Material();
