@@ -14,7 +14,7 @@ export function createRgPoc() {
   // add base;
   const scene = new StandardEntity(
     // new GLTFShape("models/base_scene.glb"),
-    new GLTFShape("models/hww_base_10_alternateV3.glb"),
+    new GLTFShape("models/hww_base_10_alternateV4.glb"),
     // new GLTFShape("models/hww_base_07.glb"),
     new Transform({ position: new Vector3(8, 0, 8) })
   );
@@ -83,9 +83,9 @@ export function createRgPoc() {
 
   const screen2_2 = new GalleryPlaneVideo(
     new Transform({
-      position: new Vector3(1.7828, 9.7145, 6.4615),
+      position: new Vector3(1.7702, 9.5709, 6.3),
       rotation: Quaternion.Euler(0, 120, 0),
-      scale: new Vector3(4.8, 2.7, 1),
+      scale: new Vector3(4.8, 2.65, 1),
       // scale: new Vector3(1.9, 1.4, 1),
     }),
     "https://hogsters.s3.ap-southeast-1.amazonaws.com/hww-720x480.mp4",
