@@ -14,24 +14,24 @@ export function createRgPoc() {
   // add base;
   const scene = new StandardEntity(
     // new GLTFShape("models/base_scene.glb"),
-    new GLTFShape("models/hww_base_10_alternateV4.glb"),
+    new GLTFShape("models/hww_base_10_alternateV9.glb"),
     // new GLTFShape("models/hww_base_07.glb"),
-    new Transform({ position: new Vector3(8, 0, 8) })
+    new Transform({ position: new Vector3(8, 0, 8), rotation: Quaternion.Euler(0, 180, 0) })
   );
 
 
   // // // add the lifts;
   const lift_1 = new StandardEntity(
     new GLTFShape("models/lift_1_no_mat.glb"),
-    new Transform({ position: new Vector3(8, 0, 8) })
+    new Transform({ position: new Vector3(8, 0, 8), rotation: Quaternion.Euler(0, 180, 0) })
   );
   const lift_2 = new StandardEntity(
     new GLTFShape("models/lift_2_no_mat.glb"),
-    new Transform({ position: new Vector3(8, 0, 8) })
+    new Transform({ position: new Vector3(8, 0, 8), rotation: Quaternion.Euler(0, 180, 0) })
   );
   const lift_3 = new StandardEntity(
     new GLTFShape("models/lift_3_no_mat.glb"),
-    new Transform({ position: new Vector3(8, 0, 8) })
+    new Transform({ position: new Vector3(8, 0, 8), rotation: Quaternion.Euler(0, 180, 0) })
   );
 
 
@@ -40,7 +40,7 @@ export function createRgPoc() {
   // // setup the rotating mannequin
   const mann = new StandardEntity(
     new GLTFShape("models/mannequin_coord000.glb"),
-    new Transform({ position: new Vector3(7.9, 3.3, 4) })
+    new Transform({ position: new Vector3(8.1, 3.3, 12) })
   );
   mann.addComponent(
     new utils.KeepRotatingComponent(Quaternion.Euler(0, 30, 0))
@@ -58,8 +58,8 @@ export function createRgPoc() {
   // add screen
   const screenLobby = new GalleryPlaneVideo(
     new Transform({
-      position: new Vector3(8.2, 3.55, 15.15),
-      rotation: Quaternion.Euler(0, 180, 0),
+      position: new Vector3(7.8, 3.55, .85),
+      rotation: Quaternion.Euler(0, 0, 0),
       scale: new Vector3(5.7, 2.7, 1),
     }),
     "https://hogsters.s3.ap-southeast-1.amazonaws.com/small-sample.mp4",
@@ -71,7 +71,7 @@ export function createRgPoc() {
 
   const screen2_1 = new GalleryPlaneImage(
     new Transform({
-      position: new Vector3(1.735, 9.6, 2.6076),
+      position: new Vector3(14.27, 9.6, 13.4),
       rotation: Quaternion.Euler(0, 60, 0),
       scale: new Vector3(1.55, 2.5, 1),
     }),
@@ -83,7 +83,7 @@ export function createRgPoc() {
 
   const screen2_2 = new GalleryPlaneVideo(
     new Transform({
-      position: new Vector3(1.7702, 9.5709, 6.3),
+      position: new Vector3(14.15, 9.5709, 9.55),
       rotation: Quaternion.Euler(0, 120, 0),
       scale: new Vector3(4.8, 2.65, 1),
       // scale: new Vector3(1.9, 1.4, 1),
@@ -96,7 +96,7 @@ export function createRgPoc() {
 
   const screen2_3 = new GalleryPlaneImage(
     new Transform({
-      position: new Vector3(5.3227, 9.6964, 8.47501),
+      position: new Vector3(10.69, 9.6964, 7.52),
       rotation: Quaternion.Euler(0, 0, 0),
       scale: new Vector3(1.55, 1.3, 1),
     }),
@@ -108,8 +108,8 @@ export function createRgPoc() {
 
   const screen3_1 = new GalleryPlaneImage(
     new Transform({
-      position: new Vector3(7.18434, 15.514, 12.6),
-      rotation: Quaternion.Euler(180, 180, 0),
+      position: new Vector3(8.81814, 15.514, 3.2558),
+      rotation: Quaternion.Euler(180, 0, 0),
       scale: new Vector3(6.56, 2.66, 1),
     }),
     "images/screen3-iori.png",
