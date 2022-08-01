@@ -62,7 +62,7 @@ export function createRgPoc() {
       rotation: Quaternion.Euler(0, 0, 0),
       scale: new Vector3(5.7, 2.7, 1),
     }),
-    "https://hogsters.s3.ap-southeast-1.amazonaws.com/small-sample.mp4",
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/tmf-720x480.mp4",
     "https://youtube.com"
 
 
@@ -84,12 +84,12 @@ export function createRgPoc() {
   const screen2_2 = new GalleryPlaneVideo(
     new Transform({
       position: new Vector3(14.15, 9.5709, 9.55),
-      rotation: Quaternion.Euler(0, 120, 0),
+      rotation: Quaternion.Euler(0, 300, 0),
       scale: new Vector3(4.8, 2.65, 1),
       // scale: new Vector3(1.9, 1.4, 1),
     }),
-    "https://hogsters.s3.ap-southeast-1.amazonaws.com/hww-720x480.mp4",
-    "https://youtube.com"
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/fathers-day-720x480.mp4",
+    "https://www.youtube.com/watch?v=70kfeTYi5QA"
   );
 
   screen2_2.play();
@@ -97,10 +97,10 @@ export function createRgPoc() {
   const screen2_3 = new GalleryPlaneImage(
     new Transform({
       position: new Vector3(10.69, 9.6964, 7.52),
-      rotation: Quaternion.Euler(0, 0, 0),
+      rotation: Quaternion.Euler(180, 0, 0),
       scale: new Vector3(1.55, 1.3, 1),
     }),
-    "images/iori.png",
+    "images/holojam.png",
     "https://google.com"
 
 
