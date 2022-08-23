@@ -55,7 +55,7 @@ export function createRgPoc() {
   // //   new Transform({ position: new Vector3(8, 0, 8) })
   // // );
 
-  // add screen
+  // add lobby screen
   const screenLobby = new GalleryPlaneVideo(
     new Transform({
       position: new Vector3(7.8, 3.55, .85),
@@ -69,11 +69,21 @@ export function createRgPoc() {
   );
   screenLobby.play();
 
+  // level 2 screen - left
   const screen2_1 = new GalleryPlaneImage(
+
+    // PORTRAIT rotation
+    // new Transform({
+    //   position: new Vector3(14.27, 9.6, 13.4),
+    //   rotation: Quaternion.Euler(0, 60, 0),
+    //   scale: new Vector3(1.55, 2.5, 1),
+    // }),
+
+    // LANDSCAPE
     new Transform({
       position: new Vector3(14.27, 9.6, 13.4),
-      rotation: Quaternion.Euler(0, 60, 0),
-      scale: new Vector3(1.55, 2.5, 1),
+      rotation: Quaternion.Euler(0, 60, 180),
+      scale: new Vector3(2.5, 1.55, 1),
     }),
     "images/iori.png",
     "https://google.com"
@@ -81,6 +91,7 @@ export function createRgPoc() {
 
   );
 
+  // level 2 screen - center
   const screen2_2 = new GalleryPlaneVideo(
     new Transform({
       position: new Vector3(14.15, 9.5709, 9.55),
@@ -94,6 +105,7 @@ export function createRgPoc() {
 
   screen2_2.play();
 
+  // level 2 screen - right
   const screen2_3 = new GalleryPlaneImage(
     new Transform({
       position: new Vector3(10.69, 9.6964, 7.52),
@@ -106,6 +118,7 @@ export function createRgPoc() {
 
   );
 
+  // level 3 screen
   const screen3_1 = new GalleryPlaneImage(
     new Transform({
       position: new Vector3(8.81814, 15.514, 3.2558),
@@ -117,60 +130,4 @@ export function createRgPoc() {
 
   );
 
-  // temp mat for screen
-  // const mat = new Material();
-  // mat.albedoColor = Color3.Red();
-  // screenLobby.addComponent(mat);
-  // screen2_1.addComponent(mat);
-  // screen2_2.addComponent(mat);
-  // screen2_3.addComponent(mat);
-  // screen3_1.addComponent(mat);
-
-  // #1
-  // const myVideoClip = new VideoClip(
-  //   // 'videos/SampleVideo_640x360_1mb.mp4'
-  //   // 'https://hogsters.s3.ap-southeast-1.amazonaws.com/Hogarth_Singapore_Non_TVC_Reel_2022_PR004.mp4'
-  //   "videos/hww-trim2.mp4"
-  //   // "https://hogsters.s3.ap-southeast-1.amazonaws.com/Hogarth_Singapore_Non_TVC_Reel_2022_PR004 - trim2.mp4"
-  // );
-
-  // #2
-  // const myVideoTexture = new VideoTexture(myVideoClip);
-  // myVideoTexture.loop = true;
-  // myVideoTexture.volume = 0;
-  // myVideoTexture.play();
-
-  // #3
-  // const myMaterial = new Material();
-  // myMaterial.albedoTexture = myVideoTexture;
-  // myMaterial.roughness = 1;
-  // myMaterial.specularIntensity = 0;
-  // myMaterial.metallic = 0;
-
-  // const lobbyVideo: Video = new Video("https://hogsters.s3.ap-southeast-1.amazonaws.com/hww-720x480.mp4");
-  // const screen2_2Video: Video = new Video("https://hogsters.s3.ap-southeast-1.amazonaws.com/small-sample.mp4");
-  // const screen2_3Video: Video = new Video("https://hogsters.s3.ap-southeast-1.amazonaws.com/hww-720x480.mp4");
-
-  // screenLobby.addComponentOrReplace(lobbyVideo.vidMaterial);
-  // screen2_2.addComponentOrReplace(screen2_2Video.vidMaterial);
-  // lobbyVideo.play();
-  // screen2_2Video.play();
-
-
-  // screenLobby.addComponent(
-  //   new OnPointerDown(() => {
-  //     lobbyVideo.playing = !lobbyVideo.playing;
-  //   })
-  // );
-
-  // screen2_1.addComponent(myMaterial);
-  // screen2_2.addComponent(myMaterial);
-  // screen2_3.addComponent(myMaterial);
-  // screen3_1.addComponent(myMaterial);
-
-  // //screens
-  // const screens = new StandardEntity(
-  //   new GLTFShape("models/hww_screens.glb"),
-  //   new Transform()
-  // );
 }
