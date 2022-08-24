@@ -63,8 +63,8 @@ export function createRgPoc() {
       scale: new Vector3(5.7, 2.7, 1),
     }),
     "https://hogsters.s3.ap-southeast-1.amazonaws.com/tmf-720x480.mp4",
-    "https://youtube.com"
-
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/tmf-720x480.mp4",
+    "Watch video"
 
   );
   screenLobby.play();
@@ -85,25 +85,36 @@ export function createRgPoc() {
       rotation: Quaternion.Euler(0, 60, 180),
       scale: new Vector3(2.5, 1.55, 1),
     }),
-    "images/iori.png",
-    "https://google.com"
-
-
+    "images/volvo.png",
+    "https://youtu.be/TBAGP4SYbu4",
+    "Watch video"
   );
 
   // level 2 screen - center
-  const screen2_2 = new GalleryPlaneVideo(
+  const screen2_2 = new GalleryPlaneImage(
     new Transform({
       position: new Vector3(14.15, 9.5709, 9.55),
-      rotation: Quaternion.Euler(0, 300, 0),
+      rotation: Quaternion.Euler(180, 300, 0),
       scale: new Vector3(4.8, 2.65, 1),
       // scale: new Vector3(1.9, 1.4, 1),
     }),
-    "https://hogsters.s3.ap-southeast-1.amazonaws.com/fathers-day-720x480.mp4",
-    "https://www.youtube.com/watch?v=70kfeTYi5QA"
-  );
+    "images/away-day.png",
+    "https://www.google.com/",
+    "Watch video"
 
-  screen2_2.play();
+  );
+  // const screen2_2 = new GalleryPlaneVideo(
+  //   new Transform({
+  //     position: new Vector3(14.15, 9.5709, 9.55),
+  //     rotation: Quaternion.Euler(0, 300, 0),
+  //     scale: new Vector3(4.8, 2.65, 1),
+  //     // scale: new Vector3(1.9, 1.4, 1),
+  //   }),
+  //   "https://hogsters.s3.ap-southeast-1.amazonaws.com/fathers-day-720x480.mp4",
+  //   "https://www.youtube.com/watch?v=70kfeTYi5QA"
+  // );
+
+  // screen2_2.play();
 
   // level 2 screen - right
   const screen2_3 = new GalleryPlaneImage(
@@ -112,21 +123,21 @@ export function createRgPoc() {
       rotation: Quaternion.Euler(180, 0, 0),
       scale: new Vector3(1.55, 1.3, 1),
     }),
-    "images/holojam.png",
-    "https://google.com"
-
-
+    "images/verdant.png",
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/verdant.mp4",
+    "Watch video"
   );
 
   // level 3 screen
   const screen3_1 = new GalleryPlaneImage(
     new Transform({
-      position: new Vector3(8.81814, 15.514, 3.2558),
+      position: new Vector3(8.81814, 15.514, 3.3658),
       rotation: Quaternion.Euler(180, 0, 0),
       scale: new Vector3(6.56, 2.66, 1),
     }),
     "images/screen3-iori.png",
-    "https://iori-labs.io/"
+    "https://iori-labs.io/",
+    "Visit website"
 
   );
 

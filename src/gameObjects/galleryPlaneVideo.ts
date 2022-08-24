@@ -7,8 +7,8 @@ export class GalleryPlaneVideo extends GalleryPlane {
 
   private videoTex: Video;
 
-  constructor(transform: TranformConstructorArgs, videoUrl: string, exitUrl: string) {
-    super(transform, exitUrl);
+  constructor(transform: TranformConstructorArgs, videoUrl: string, exitUrl: string, hoverText: string) {
+    super(transform, exitUrl, hoverText);
 
     this.videoTex = new Video(videoUrl);
     this.addComponentOrReplace(this.videoTex.vidMaterial);
