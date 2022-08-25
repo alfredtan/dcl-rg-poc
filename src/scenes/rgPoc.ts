@@ -14,7 +14,7 @@ export function createRgPoc() {
   // add base;
   const scene = new StandardEntity(
     // new GLTFShape("models/base_scene.glb"),
-    new GLTFShape("models/hww_base_10_alternateV9.glb"),
+    new GLTFShape("models/hww_base_10_alternate9_edit.glb"),
     // new GLTFShape("models/hww_base_07.glb"),
     new Transform({ position: new Vector3(8, 0, 8), rotation: Quaternion.Euler(0, 180, 0) })
   );
@@ -83,7 +83,7 @@ export function createRgPoc() {
     new Transform({
       position: new Vector3(14.27, 9.6, 13.4),
       rotation: Quaternion.Euler(0, 60, 180),
-      scale: new Vector3(2.5, 1.55, 1),
+      scale: new Vector3(2.5, 1.45, 1),
     }),
     "images/volvo.png",
     "https://youtu.be/TBAGP4SYbu4",
@@ -99,7 +99,7 @@ export function createRgPoc() {
       // scale: new Vector3(1.9, 1.4, 1),
     }),
     "images/away-day.png",
-    "https://www.google.com/",
+    "https://hogsters.s3.ap-southeast-1.amazonaws.com/hogarth-away-day-1920x1080.mp4",
     "Watch video"
 
   );
@@ -131,7 +131,7 @@ export function createRgPoc() {
   // level 3 screen
   const screen3_1 = new GalleryPlaneImage(
     new Transform({
-      position: new Vector3(8.81814, 15.514, 3.3658),
+      position: new Vector3(8.81814, 15.514, 3.2558),
       rotation: Quaternion.Euler(180, 0, 0),
       scale: new Vector3(6.56, 2.66, 1),
     }),
