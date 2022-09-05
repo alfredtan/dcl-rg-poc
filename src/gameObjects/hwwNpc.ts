@@ -4,7 +4,7 @@ import { movePlayerTo } from "@decentraland/RestrictedActions";
 const welcomeDialog: Dialog[] = [
   {
     text: "Hi, welcome to the Hogarth Metaverse APAC Office!<br>We're the world's largest creative production company and we're so glad you dropped by for a visit!",
-    fontSize: 22
+    fontSize: 22,
   },
   {
     text: "On this level on the screen behind you is our video of our Metaverse Foundry, a service that helps brands get on the Metaverse at scale!",
@@ -15,9 +15,9 @@ const welcomeDialog: Dialog[] = [
     fontSize: 22,
     isQuestion: true,
     buttons: [
-      { label: 'Yes', goToDialog: "dialogYes1" },
-      { label: 'No', goToDialog: "dialogNo1" },
-    ]
+      { label: "Yes", goToDialog: "dialogYes1" },
+      { label: "No", goToDialog: "dialogNo1" },
+    ],
   },
   {
     name: "dialogYes1",
@@ -28,7 +28,6 @@ const welcomeDialog: Dialog[] = [
     name: "dialogYes2",
     fontSize: 22,
     text: "On Level 2 there's a showcase of the projects we've done in the metaverse space.",
-
   },
   {
     name: "dialogYes3",
@@ -37,29 +36,33 @@ const welcomeDialog: Dialog[] = [
     isQuestion: true,
     buttons: [
       {
-        label: 'Level 2', goToDialog: "final", triggeredActions: () => {
+        label: "Level 2",
+        goToDialog: "final",
+        triggeredActions: () => {
           movePlayerTo({ x: 6, y: 9, z: 5 });
-        }
+        },
       },
       {
-        label: 'Level 3', goToDialog: "final", triggeredActions: () => {
+        label: "Level 3",
+        goToDialog: "final",
+        triggeredActions: () => {
           movePlayerTo({ x: 6.75, y: 15, z: 3.5 });
-        }
+        },
       },
-      { label: 'No, thanks', goToDialog: "dialogNo1" }
-    ]
+      { label: "No, thanks", goToDialog: "dialogNo1" },
+    ],
   },
   {
     name: "dialogNo1",
     fontSize: 22,
     text: "Sure! Please feel free to browse around at your own time and find out more about us! I'm here if you need help.",
-    isEndOfDialog: true
+    isEndOfDialog: true,
   },
   {
     name: "final",
     fontSize: 22,
     text: "Have fun exploring!",
-    isEndOfDialog: true
+    isEndOfDialog: true,
   },
   // {
   //   name: "dialogYes",
@@ -105,7 +108,7 @@ export class HwwNPC extends Entity {
 
     // the actual NPC model
     const npc = new Entity();
-    npc.addComponent(new GLTFShape("models/npc_robot.glb"));
+    npc.addComponent(new GLTFShape("models/Navy_Soldier_Salute.glb"));
     npc.setParent(this);
 
     // the collidor so that we can click on it
